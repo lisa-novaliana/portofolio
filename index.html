@@ -94,175 +94,121 @@
       padding: 1rem;
     }
 
-    footer a {
+    .social-card a {
+      text-decoration: none;
       color: white;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: none;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Portofolio Lisa</h1>
-    <nav class="nav-tabs-custom">
-      <button class="tab-link active" data-target="tentang">Tentang Saya</button>
-      <button class="tab-link" data-target="alamat">Alamat</button>
-      <button class="tab-link" data-target="keahlian">Keahlian</button>
-      <button class="tab-link" data-target="pendidikan">Pendidikan</button>
-      <button class="tab-link" data-target="sertifikat">Sertifikat</button>
-    </nav>
-  </header>
 
-  <main class="container">
-    <div class="content-box">
-      <!-- Tentang Saya -->
-      <section id="tentang" class="tab-section active">
-        <h2 class="section-title">Tentang Saya</h2>
-        <div class="text-center">
-          <img src="lisa.jpeg" alt="Foto Lisa" class="profile-photo" />
-        </div>
-        <p>
-          Saya Lisa Novaliana Lestari. Saya adalah seorang pelajar yang memiliki minat dalam bidang Teknik Komputer Jaringan, khususnya dalam pengembangan web, jaringan komputer, dan keamanan siber. Saya aktif mengikuti berbagai pelatihan dan sertifikasi untuk menambah pengetahuan serta keterampilan. Saya percaya bahwa belajar dan mencoba hal baru adalah kunci untuk berkembang di dunia digital yang terus berubah.
-        </p>
-      </section>
+<header>
+  <h1>Portofolio Lisa</h1>
+  <nav class="nav-tabs-custom">
+    <button class="tab-link active" data-target="tentang">Tentang Saya</button>
+    <button class="tab-link" data-target="alamat">Alamat</button>
+    <button class="tab-link" data-target="keahlian">Keahlian</button>
+    <button class="tab-link" data-target="pendidikan">Pendidikan</button>
+    <button class="tab-link" data-target="sertifikat">Sertifikat</button>
+    <button class="tab-link" data-target="sosial">Media Sosial</button>
+  </nav>
+</header>
 
-      <!-- Alamat -->
-      <section id="alamat" class="tab-section">
-        <h2 class="section-title">Alamat</h2>
-        <p>Lingk. Bence 02, RT/RW 001/003, Ds. Bence, Kec. Garum, Kab. Blitar</p>
-      </section>
+<main class="container">
+  <div class="content-box">
 
-      <!-- Keahlian -->
-      <section id="keahlian" class="tab-section">
-        <h2 class="section-title">Keahlian</h2>
-        <ul>
-          <li>Dasar Jaringan Komputer</li>
-          <li>Konfigurasi Router</li>
-          <li>Dasar Linux Server</li>
-          <li>Virtualisasi (VirtualBox/VMware)</li>
-          <li>Firewall Dasar (Fortigate)</li>
-          <li>HTML, CSS, sedikit JavaScript, dan Bootstrap</li>
-        </ul>
-      </section>
+    <!-- Tentang -->
+    <section id="tentang" class="tab-section active">
+      <h2 class="section-title">Tentang Saya</h2>
+      <div class="text-center">
+        <img src="lisa.jpeg" class="profile-photo" alt="Foto Lisa">
+      </div>
+      <p>
+        Saya Lisa Novaliana Lestari. Saya adalah seorang pelajar yang memiliki minat
+        dalam bidang Teknik Komputer Jaringan, khususnya pengembangan web, jaringan
+        komputer, dan keamanan siber.
+      </p>
+    </section>
 
-      <!-- Pendidikan -->
-      <section id="pendidikan" class="tab-section">
-        <h2 class="section-title">Pendidikan</h2>
-        <ul>
-          <li>SMA Negeri 1 Garum (2019 - 2022)</li>
-          <li>Pelatihan Teknik Komputer Jaringan (2022 - 2023)</li>
-          <li>Workshop Pengembangan Web dan Keamanan Siber (2023)</li>
-        </ul>
-      </section>
+    <!-- Alamat -->
+    <section id="alamat" class="tab-section">
+      <h2 class="section-title">Alamat</h2>
+      <p>Lingk. Bence 02, RT/RW 001/003, Ds. Bence, Kec. Garum, Kab. Blitar</p>
+    </section>
 
-      <!-- Sertifikat -->
-      <section id="sertifikat" class="tab-section">
-        <h2 class="section-title">Sertifikat</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="sertifikat-aguna-network.jpeg" class="card-img-top" alt="Aguna - Network Fundamental" />
-              <div class="card-body">
-                <h6 class="card-title">Aguna - Network Fundamental</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="sertifikat-aguna-linux.jpeg" class="card-img-top" alt="Aguna - Linux Fundamental" />
-              <div class="card-body">
-                <h6 class="card-title">Aguna - Linux Fundamental</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="sertifikat-aguna-vm.jpeg" class="card-img-top" alt="Virtual - Machine Fundamental" />
-              <div class="card-body">
-                <h6 class="card-title">Virtual - Machine Fundamental</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="sertifikat-fortinet-start.jpeg" class="card-img-top" alt="Fortinet - Getting Started" />
-              <div class="card-body">
-                <h6 class="card-title">Fortinet - Getting Started</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="sertifikat-fortinet-intro.jpeg" class="card-img-top" alt="Fortinet - Introduction" />
-              <div class="card-body">
-                <h6 class="card-title">Fortinet - Introduction</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="sertifikat-fortinet-tech.jpeg" class="card-img-top" alt="Fortinet - Technical" />
-              <div class="card-body">
-                <h6 class="card-title">Fortinet - Technical</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="sertifikat-fortigate.jpeg" class="card-img-top" alt="Fortinet - Fortigate 7.4" />
-              <div class="card-body">
-                <h6 class="card-title">Fortinet - Fortigate 7.4</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="sertifikat-idn.jpeg" class="card-img-top" alt="IDN - Academy" />
-              <div class="card-body">
-                <h6 class="card-title">IDN - Academy Goes to School Network</h6>
-              </div>
-            </div>
+    <!-- Keahlian -->
+    <section id="keahlian" class="tab-section">
+      <h2 class="section-title">Keahlian</h2>
+      <ul>
+        <li>Dasar Jaringan Komputer</li>
+        <li>Linux Server Dasar</li>
+        <li>Virtualisasi</li>
+        <li>Firewall Dasar (Fortigate)</li>
+        <li>HTML, CSS, Bootstrap</li>
+      </ul>
+    </section>
+
+    <!-- Pendidikan -->
+    <section id="pendidikan" class="tab-section">
+      <h2 class="section-title">Pendidikan</h2>
+      <ul>
+        <li>SMA Negeri 1 Garum</li>
+        <li>Pelatihan TKJ</li>
+        <li>Workshop Web & Cyber Security</li>
+      </ul>
+    </section>
+
+    <!-- Sertifikat -->
+    <section id="sertifikat" class="tab-section">
+      <h2 class="section-title">Sertifikat</h2>
+      <p>Berisi sertifikat pelatihan dan kursus yang pernah diikuti.</p>
+    </section>
+
+    <!-- Media Sosial -->
+    <section id="sosial" class="tab-section">
+      <h2 class="section-title">Media Sosial</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card bg-danger text-center p-4 social-card">
+            <h4>Instagram</h4>
+            <a href="https://www.instagram.com/lisanovtari" target="_blank">
+              @lisanovtari
+            </a>
           </div>
         </div>
-      </section>
-    </div>
-  </main>
+        <div class="col-md-6">
+          <div class="card bg-primary text-center p-4 social-card">
+            <h4>Blogger</h4>
+            <a href="https://lisanovalianacat.blogspot.com/?m=1" target="_blank">
+              lisanovalianacat.blogspot.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>
-      Instagram: <a href="https://www.instagram.com/lisanovtari" target="_blank">@lisanovtari</a> |
-      Blogger: <a href="https://lisanovalianacat.blogspot.com/?m=1" target="_blank">lisanovalianacat.blogspot.com</a>
-    </p>
-  </footer>
+  </div>
+</main>
 
-  <script>
-    const tabLinks = document.querySelectorAll(".tab-link");
-    const tabSections = document.querySelectorAll(".tab-section");
+<footer>
+  <p>&copy; 2026 Portofolio Lisa</p>
+</footer>
 
-    tabLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        // Remove active classes
-        tabLinks.forEach(btn => btn.classList.remove("active"));
-        tabSections.forEach(section => section.classList.remove("active"));
+<script>
+  const tabLinks = document.querySelectorAll(".tab-link");
+  const tabSections = document.querySelectorAll(".tab-section");
 
-        // Add active to clicked
-        link.classList.add("active");
-        document.getElementById(link.dataset.target).classList.add("active");
-      });
+  tabLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      tabLinks.forEach(btn => btn.classList.remove("active"));
+      tabSections.forEach(section => section.classList.remove("active"));
+
+      link.classList.add("active");
+      document.getElementById(link.dataset.target).classList.add("active");
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
-
