@@ -1,212 +1,206 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Lisa</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body {
-      background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Lisa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    header {
-      background-color: #0db9fd;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
+    <style>
+        body {
+            padding-top: 80px;
+            background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    header h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      color: #fff;
-    }
+        header {
+            background-color: #0db9fd;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
 
-    .nav-tabs-custom {
-      display: flex;
-      gap: 1rem;
-    }
+        .menu a {
+            color: white;
+            margin-left: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+        }
 
-    .nav-tabs-custom button {
-      background: none;
-      border: none;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
+        .menu a:hover {
+            text-decoration: underline;
+        }
 
-    .nav-tabs-custom button.active {
-      text-decoration: underline;
-    }
+        .content-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 1200px;
+        }
 
-    .container {
-      padding-top: 120px;
-      max-width: 1000px;
-    }
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin-bottom: 25px;
+        }
 
-    .profile-photo {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 5px solid #ffffff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
+        .section-title {
+            color: #0db1fd;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
 
-    .section-title {
-      margin-top: 20px;
-      margin-bottom: 15px;
-      color: #0db1fd;
-      font-weight: 600;
-    }
+        .tab-section {
+            display: none;
+        }
 
-    .content-box {
-      background-color: #ffffff;
-      border: 1px solid #d0eaff;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-      padding: 40px;
-    }
+        .tab-section.active {
+            display: block;
+        }
 
-    .tab-section {
-      display: none;
-    }
+        .card {
+            border: none;
+            transition: 0.3s;
+        }
 
-    .tab-section.active {
-      display: block;
-    }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
 
-    footer {
-      background-color: #20b0db;
-      margin-top: 60px;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .social-card a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-  </style>
+        footer {
+            background-color: #20b0db;
+            margin-top: 60px;
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Portofolio Lisa</h1>
- <nav class="nav-tabs-custom">
-  <button class="tab-link active" data-target="tentang">Tentang Saya</button>
-  <button class="tab-link" data-target="alamat">Alamat</button>
-  <button class="tab-link" data-target="keahlian">Keahlian</button>
-  <button class="tab-link" data-target="pendidikan">Pendidikan</button>
-  <button class="tab-link" data-target="sertifikat">Sertifikat</button>
-  <button class="tab-link" data-target="sosial">Media Sosial</button>
-</nav>
-
+<header class="fixed-top text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h4 class="mb-0">Portofolio Lisa</h4>
+        <div class="menu">
+            <a onclick="showTab('tentang')">Tentang Saya</a>
+            <a onclick="showTab('alamat')">Alamat</a>
+            <a onclick="showTab('keahlian')">Keahlian</a>
+            <a onclick="showTab('pendidikan')">Pendidikan</a>
+            <a onclick="showTab('sertifikat')">Sertifikat</a>
+        </div>
+    </div>
 </header>
 
-<main class="container">
-  <div class="content-box">
+<main class="container d-flex justify-content-center">
+    <div class="content-box mt-4">
 
-    <!-- Tentang -->
-    <section id="tentang" class="tab-section active">
-      <h2 class="section-title">Tentang Saya</h2>
-      <div class="text-center">
-        <img src="lisa.jpeg" class="profile-photo" alt="Foto Lisa">
-      </div>
-      <p>
-        Saya Lisa Novaliana Lestari. Saya adalah seorang pelajar yang memiliki minat
-        dalam bidang Teknik Komputer Jaringan, khususnya pengembangan web, jaringan
-        komputer, dan keamanan siber.
-      </p>
-    </section>
+        <!-- Tentang Saya -->
+        <section id="tentang" class="tab-section active text-center">
+            <img src="lisa.jpeg" class="profile-photo">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p>
+                Saya Lisa Novaliana Lestari. Saya adalah pelajar SMK dengan minat pada
+                Teknik Komputer dan Jaringan, pengembangan web, jaringan komputer,
+                dan keamanan siber. Saya senang belajar hal baru dan mengikuti pelatihan
+                untuk meningkatkan keterampilan di bidang IT.
+            </p>
+        </section>
 
-    <!-- Alamat -->
-    <section id="alamat" class="tab-section">
-      <h2 class="section-title">Alamat</h2>
-      <p>Lingk. Bence 02, RT/RW 001/003, Ds. Bence, Kec. Garum, Kab. Blitar</p>
-    </section>
+        <!-- Alamat -->
+        <section id="alamat" class="tab-section">
+            <h2 class="section-title">Alamat</h2>
+            <ul>
+                <li>Lingk. Bence 02, RT/RW 001/003</li>
+                <li>Desa Bence, Kecamatan Garum</li>
+                <li>Kabupaten Blitar</li>
+            </ul>
+        </section>
 
-    <!-- Keahlian -->
-    <section id="keahlian" class="tab-section">
-      <h2 class="section-title">Keahlian</h2>
-      <ul>
-        <li>Dasar Jaringan Komputer</li>
-        <li>Linux Server Dasar</li>
-        <li>Virtualisasi</li>
-        <li>Firewall Dasar (Fortigate)</li>
-        <li>HTML, CSS, Bootstrap</li>
-      </ul>
-    </section>
+        <!-- Keahlian -->
+        <section id="keahlian" class="tab-section">
+            <h2 class="section-title">Keahlian</h2>
+            <ul>
+                <li>Dasar Jaringan Komputer</li>
+                <li>Konfigurasi Router</li>
+                <li>Linux Server Dasar</li>
+                <li>Virtualisasi (VirtualBox)</li>
+                <li>Firewall Dasar (Fortigate)</li>
+                <li>HTML, CSS, Bootstrap</li>
+            </ul>
+        </section>
 
-    <!-- Pendidikan -->
-    <section id="pendidikan" class="tab-section">
-      <h2 class="section-title">Pendidikan</h2>
-      <ul>
-        <li>SMP Negeri 1 Garum (2021 - 2023) </li>
-        <li>SMK Negeri 1 Nglegok (2023 - sekarang)</li>
-      </ul>
-    </section>
+        <!-- Pendidikan -->
+        <section id="pendidikan" class="tab-section">
+            <h2 class="section-title">Pendidikan</h2>
+            <ul>
+                <li>SMP Negeri 1 Garum (2021 - 2023)</li>
+                <li>SMK Negeri 1 Nglegok (2023 - sekarang)</li>
+            </ul>
+        </section>
 
-    <!-- Sertifikat -->
-    <section id="sertifikat" class="tab-section">
-      <h2 class="section-title">Sertifikat</h2>
-      <p>Berisi sertifikat pelatihan dan kursus yang pernah diikuti.</p>
-    </section>
+        <!-- Sertifikat -->
+        <section id="sertifikat" class="tab-section">
+            <h2 class="section-title">Sertifikat</h2>
 
-    <!-- Media Sosial -->
-<section id="sosial" class="tab-section">
-  <h2 class="section-title">Media Sosial</h2>
-  <ul>
-    <li>
-      Instagram :
-      <a href="https://www.instagram.com/lisanovtari" target="_blank">
-        @lisanovtari
-      </a>
-    </li>
-    <li>
-      Blogger :
-      <a href="https://lisanovalianacat.blogspot.com/?m=1" target="_blank">
-        lisanovalianacat.blogspot.com
-      </a>
-    </li>
-  </ul>
-</section>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="sertifikat-aguna-network.jpeg" class="card-img-top">
+                        <div class="card-body text-center">Network Fundamental</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="sertifikat-aguna-linux.jpeg" class="card-img-top">
+                        <div class="card-body text-center">Linux Fundamental</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="sertifikat-aguna-vm.jpeg" class="card-img-top">
+                        <div class="card-body text-center">Virtual Machine</div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Sertifikat bawah rata tengah -->
+            <div class="row mt-4">
+                <div class="col d-flex justify-content-center">
+                    <div class="card" style="max-width:300px">
+                        <img src="sertifikat-fortigate.jpeg" class="card-img-top">
+                        <div class="card-body text-center">Fortigate 7.4</div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card" style="max-width:300px">
+                        <img src="sertifikat-idn.jpeg" class="card-img-top">
+                        <div class="card-body text-center">
+                            IDN Academy Goes to School Network
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  </div>
+    </div>
 </main>
 
-
+<footer class="text-white text-center py-3">
+    <p>&copy; 2025 Portofolio Lisa</p>
+</footer>
 
 <script>
-  const tabLinks = document.querySelectorAll(".tab-link");
-  const tabSections = document.querySelectorAll(".tab-section");
-
-  tabLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      tabLinks.forEach(btn => btn.classList.remove("active"));
-      tabSections.forEach(section => section.classList.remove("active"));
-
-      link.classList.add("active");
-      document.getElementById(link.dataset.target).classList.add("active");
-    });
-  });
+    function showTab(id) {
+        document.querySelectorAll('.tab-section').forEach(sec => {
+            sec.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+    }
 </script>
 
 </body>
 </html>
-
-
-
