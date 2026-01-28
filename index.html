@@ -30,16 +30,15 @@
             text-decoration: underline;
         }
 
-       .content-box {
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    max-width: 1000px;   /* DIPERKECIL */
-    width: 100%;
-    margin: 0 auto 60px;
-}
-
+        .content-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto 60px;
+        }
 
         .profile-photo {
             width: 180px;
@@ -65,11 +64,12 @@
             display: block;
         }
 
-        /* ==== CARD UMUM ==== */
+        /* ===== CARD UMUM ===== */
         .card {
             border: none;
             transition: 0.3s;
             height: 100%;
+            border-radius: 15px;
         }
 
         .card:hover {
@@ -77,45 +77,22 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
-    /* ===== SERTIFIKAT ===== */
-.cert-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-}
+        /* ===== SERTIFIKAT ===== */
+        .cert-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 11;
+            object-fit: contain; /* BIAR TIDAK KE POTONG */
+            background: #fff;
+            padding: 10px;
+            border-radius: 15px 15px 0 0;
+        }
 
-.cert-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-}
-
-.cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.cert-img {
-    width: 100%;
-    height: 260px;          /* INI YANG MEMBESARKAN */
-    object-fit: cover;     /* BIKIN GAMBAR PENUH */
-    background: #fff;
-    padding: 0;             /* HILANGKAN PENYEMPIT */
-    border-radius: 15px 15px 0 0;
-}
-
-
-.cert-card .card-body {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-
+        .cert-card .card-body {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+        }
     </style>
 </head>
 
@@ -142,10 +119,10 @@
             <img src="lisa.jpeg" class="profile-photo">
             <h2 class="section-title">Tentang Saya</h2>
             <p>
-                Perkenalkan, nama saya Lisa Novaliana Lestari. Saya adalah pelajar SMK Negeri 1 Nglegok yang saat ini duduk di bangku kelas XII jurusan Teknik Komputer Jaringan (TKJ).
-                Saya tertarik pada bidang jaringan komputer, sistem operasi Linux, dan pembuatan website sederhana. Saya senang belajar hal baru,
-                terutama yang berhubungan dengan teknologi, dan saya ingin terus mengembangkan kemampuan di bidang teknologi dan informasi. 
-        
+                Perkenalkan, nama saya Lisa Novaliana Lestari. Saya pelajar SMK Negeri 1 Nglegok kelas XII
+                jurusan Teknik Komputer dan Jaringan (TKJ). Saya tertarik pada jaringan komputer,
+                Linux, dan pembuatan website sederhana. Saya senang belajar hal baru di bidang teknologi
+                dan ingin terus mengembangkan kemampuan saya.
             </p>
         </section>
 
@@ -177,74 +154,75 @@
             <h2 class="section-title">Pendidikan</h2>
             <ul>
                 <li>SMP Negeri 1 Garum (2021 - 2023)</li>
-                <li>SMK Negeri 1 Nglegok (2023 - sekarang)</li>
+                <li>SMK Negeri 1 Nglegok (2023 - Sekarang)</li>
             </ul>
         </section>
 
-      <section id="sertifikat" class="tab-section">
-    <h2 class="section-title text-center">Sertifikat</h2>
+        <!-- Sertifikat -->
+        <section id="sertifikat" class="tab-section">
+            <h2 class="section-title text-center">Sertifikat</h2>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card cert-card">
+                        <img src="sertifikat-aguna-network.jpeg" class="cert-img">
+                        <div class="card-body">Aguna - Network Fundamental</div>
+                    </div>
+                </div>
 
-        <div class="col">
-            <div class="card cert-card">
-                <img src="sertifikat-aguna-network.jpeg" class="cert-img">
-                <div class="card-body">Aguna - Network Fundamental</div>
+                <div class="col">
+                    <div class="card cert-card">
+                        <img src="sertifikat-aguna-linux.jpeg" class="cert-img">
+                        <div class="card-body">Aguna - Linux Fundamental</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card cert-card">
+                        <img src="sertifikat-aguna-vm.jpeg" class="cert-img">
+                        <div class="card-body">Aguna - Virtual Machine</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card cert-card">
+                        <img src="sertifikat-fortinet-start.jpeg" class="cert-img">
+                        <div class="card-body">Fortinet - Getting Started</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card cert-card">
+                        <img src="sertifikat-fortinet-intro.jpeg" class="cert-img">
+                        <div class="card-body">Fortinet - Introduction</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card cert-card">
+                        <img src="sertifikat-fortinet-tech.jpeg" class="cert-img">
+                        <div class="card-body">Fortinet - Technical</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card cert-card">
+                        <img src="sertifikat-fortigate.jpeg" class="cert-img">
+                        <div class="card-body">Fortinet - Fortigate 7.4</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card cert-card">
+                        <img src="sertifikat-idn.jpeg" class="cert-img">
+                        <div class="card-body">IDN Academy Goes to School Network</div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="col">
-            <div class="card cert-card">
-                <img src="sertifikat-aguna-linux.jpeg" class="cert-img">
-                <div class="card-body">Aguna - Linux Fundamental</div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card cert-card">
-                <img src="sertifikat-aguna-vm.jpeg" class="cert-img">
-                <div class="card-body">Aguna - Virtual Machine</div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card cert-card">
-                <img src="sertifikat-fortinet-start.jpeg" class="cert-img">
-                <div class="card-body">Fortinet - Getting Started</div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card cert-card">
-                <img src="sertifikat-fortinet-intro.jpeg" class="cert-img">
-                <div class="card-body">Fortinet - Introduction</div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card cert-card">
-                <img src="sertifikat-fortinet-tech.jpeg" class="cert-img">
-                <div class="card-body">Fortinet - Technical</div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card cert-card">
-                <img src="sertifikat-fortigate.jpeg" class="cert-img">
-                <div class="card-body">Fortinet - Fortigate 7.4</div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card cert-card">
-                <img src="sertifikat-idn.jpeg" class="cert-img">
-                <div class="card-body">IDN Academy Goes to School Network</div>
-            </div>
-        </div>
+        </section>
 
     </div>
-</section>
-
+</main>
 
 <script>
     function showTab(id) {
@@ -257,11 +235,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
