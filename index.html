@@ -64,14 +64,31 @@
             display: block;
         }
 
+        /* ==== CARD UMUM ==== */
         .card {
             border: none;
             transition: 0.3s;
+            height: 100%;
         }
 
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        /* ==== RAPIN SERTIFIKAT ==== */
+        .cert-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .cert-card .card-body {
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -143,56 +160,54 @@
 
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 <div class="col">
-                    <div class="card">
-                        <img src="sertifikat-aguna-network.jpeg" class="card-img-top">
-                        <div class="card-body text-center">Aguna - Network Fundamental</div>
+                    <div class="card cert-card">
+                        <img src="sertifikat-aguna-network.jpeg" class="card-img-top cert-img">
+                        <div class="card-body">Aguna - Network Fundamental</div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="sertifikat-aguna-linux.jpeg" class="card-img-top">
-                        <div class="card-body text-center">Aguna - Linux Fundamental</div>
+                    <div class="card cert-card">
+                        <img src="sertifikat-aguna-linux.jpeg" class="card-img-top cert-img">
+                        <div class="card-body">Aguna - Linux Fundamental</div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="sertifikat-aguna-vm.jpeg" class="card-img-top">
-                        <div class="card-body text-center">Aguna - Virtual Machine</div>
+                    <div class="card cert-card">
+                        <img src="sertifikat-aguna-vm.jpeg" class="card-img-top cert-img">
+                        <div class="card-body">Aguna - Virtual Machine</div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="sertifikat-fortinet-start.jpeg" class="card-img-top">
-                        <div class="card-body text-center">Fortinet - Getting Started</div>
+                    <div class="card cert-card">
+                        <img src="sertifikat-fortinet-start.jpeg" class="card-img-top cert-img">
+                        <div class="card-body">Fortinet - Getting Started</div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="sertifikat-fortinet-intro.jpeg" class="card-img-top">
-                        <div class="card-body text-center">Fortinet - Introduction</div>
+                    <div class="card cert-card">
+                        <img src="sertifikat-fortinet-intro.jpeg" class="card-img-top cert-img">
+                        <div class="card-body">Fortinet - Introduction</div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="sertifikat-fortinet-tech.jpeg" class="card-img-top">
-                        <div class="card-body text-center">Fortinet - Technical</div>
+                    <div class="card cert-card">
+                        <img src="sertifikat-fortinet-tech.jpeg" class="card-img-top cert-img">
+                        <div class="card-body">Fortinet - Technical</div>
                     </div>
                 </div>
             </div>
 
-            <div class="row mt-4">
-                <div class="col-md-6 d-flex justify-content-center">
-                    <div class="card" style="max-width:300px">
-                        <img src="sertifikat-fortigate.jpeg" class="card-img-top">
-                        <div class="card-body text-center">Fortinet - Fortigate 7.4</div>
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-3">
+                    <div class="card cert-card">
+                        <img src="sertifikat-fortigate.jpeg" class="card-img-top cert-img">
+                        <div class="card-body">Fortinet - Fortigate 7.4</div>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-center">
-                    <div class="card" style="max-width:300px">
-                        <img src="sertifikat-idn.jpeg" class="card-img-top">
-                        <div class="card-body text-center">
-                            IDN Academy Goes to School Network
-                        </div>
+                <div class="col-md-3">
+                    <div class="card cert-card">
+                        <img src="sertifikat-idn.jpeg" class="card-img-top cert-img">
+                        <div class="card-body">IDN Academy Goes to School Network</div>
                     </div>
                 </div>
             </div>
